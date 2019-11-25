@@ -29,7 +29,7 @@ const Header header = {
     "0.1.0",
     "OpenBMC",
 };
-constexpr std::array<MessageEntry, 134> registry = {
+constexpr std::array<MessageEntry, 136> registry = {
     MessageEntry{
         "ADDDCCorrectable",
         {
@@ -1635,5 +1635,23 @@ constexpr std::array<MessageEntry, 134> registry = {
             {"string"},
             "None.",
         }},
+    MessageEntry{"AtScaleDebugConnection",
+                 {
+                     "Indicates At-scale-debug connection activity",
+                     "At-scale-debug service is now %1",
+                     "OK",
+                     1,
+                     {"string"},
+                     "None.",
+                 }},
+    MessageEntry{"AtScaleDebugConnectionFailed",
+                 {
+                     "Indicates At-scale-debug connection aborted/failed",
+                     "At-scale-debug connection aborted/failed",
+                     "Error",
+                     0,
+                     {},
+                     "None.",
+                 }},
 };
 } // namespace redfish::message_registries::openbmc
